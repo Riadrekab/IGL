@@ -27,8 +27,8 @@
      }
      public function printAbs(etudiant $etudiant)
      {
-     return $this->bdd->exec('SELECT Matricule, Matiere, Jour FROM ABSENCES WHERE Matricule ='.$etudiant->getMatricule());
-
+    // return $this->bdd->exec('SELECT Matricule, Matiere, Jour FROM ABSENCES WHERE Matricule ='.$etudiant->getMatricule());
+         return $this->bdd->query('SELECT Matricule, Matiere, Jour FROM ABSENCES WHERE Matricule ='.$etudiant->getMatricule());
      }
 
 

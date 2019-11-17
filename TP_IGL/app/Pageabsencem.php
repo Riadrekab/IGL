@@ -9,7 +9,8 @@ function getétudiant()
     $etudiant=new etudiant();
     $etudiant->setMatricule('2020');
   $tab_req= $manager->printAbs($etudiant);
-  $tab_abs=$tab_req->fetchAll;
+  $tab_abs=$tab_req->fetchAll();
+
    // $etudiants=$etudiants_req->fetchAll();
-    return  $tab_req;
+    return  $tab_abs;
 }
