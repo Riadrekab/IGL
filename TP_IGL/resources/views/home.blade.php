@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-       
+
     </head>
     <body>
    <h1>Home page test</h1>
@@ -28,19 +28,19 @@
   echo "<th>Prénom</th>";
   echo "<th>Abs</th>";
   echo "</tr>";
-  foreach ($etudiants as $etudiant)
+  foreach ($tab_abs as $etudiant)
   {
       echo "<tr>";
       echo  "<td>".$etudiant['Matricule']."</td>" ;
-      echo  "<td>".$etudiant['NomEtud']."</td>" ;
-      echo  "<td>".$etudiant['Prenoms']."</td>" ;
-      echo  "<td> <input type='checkbox' id='Chx_abs'></td>";
+    //  echo  "<td>".$etudiant['NomEtud']."</td>" ;
+     // echo  "<td>".$etudiant['Prenoms']."</td>" ;
+     // echo  "<td> <input type='checkbox' id='Chx_abs'></td>";
       echo "</tr>";
 
   }
   echo "</table>";
   echo 'yo';
   ?>
-   
+
     </body>
 </html>
