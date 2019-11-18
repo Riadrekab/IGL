@@ -8,8 +8,7 @@ function getétudiant()
     $manager= new Managerabsence($bdd);
     $etudiant=new etudiant();
     $etudiant->setMatricule('2020');
-  $tab_req= $manager->printAbs($etudiant);
-  $tab_abs=$tab_req->fetchAll();
+    $tab_abs= $manager->printAbs($etudiant);
 
    // $etudiants=$etudiants_req->fetchAll();
     return  $tab_abs;

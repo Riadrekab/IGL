@@ -1,7 +1,7 @@
 <?php
  class etudiant
  {
- private $Matricule;
+ private $Matricule,$Nom,$Prenom;
 
      /**
       * @return mixed

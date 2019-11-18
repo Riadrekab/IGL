@@ -2,11 +2,26 @@
 
 class absence
 {
-    private $date, $Module, $justifie;
+    private $Date, $Module, $Justifie,$Matricule;
 
+    /**
+     * @param mixed $Matricule
+     */
+    public function setMatricule($Matricule)
+    {
+        $this->Matricule = $Matricule;
+    }
     /**
      * @return mixed
      */
+    /**
+     * @return mixed
+     */
+    public function getMatricule()
+    {
+        return $this->Matricule;
+    }
+
     public function getDate()
     {
         return $this->date;
@@ -54,11 +69,9 @@ class absence
 
     public function hydrate(array $donne)
     {
-        foreach ($donne as $key => $value) {
-            $method = 'set' . ucfirst($key);
-            if (method_exists($this, $method)) {
-                $this->$method($value);
-            }
-        }
+     $this->setMatricule($donne['Matricule']);
+     $this->setDate($donne['Jour']);
+     $this->setJustifie($donne['justifie']);
+      $this->setModule($donne['Matiere']);
     }
 }
