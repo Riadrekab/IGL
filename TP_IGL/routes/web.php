@@ -12,6 +12,7 @@
 */
 
 Route::get('/home', 'PagesController@home');
+Route::get('/ajouter_etudiant','PagesController@Afficheretudiant');
 Route::get('/test', function () {
     return 'Un test yes';
 });

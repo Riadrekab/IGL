@@ -2,7 +2,7 @@
  class etudiant
  {
  private $Matricule,$Nom,$Prenom;
-<<<<<<< HEAD
+
 
 
 
@@ -16,8 +16,6 @@
      }
  }
 
-=======
->>>>>>> 5af9431c6e707b08c5d345bd791f284df04a5a93
 
      /**
       * @return mixed

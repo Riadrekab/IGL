@@ -15,6 +15,12 @@ class PagesController extends Controller
         affichieretudiant();
     }
 
+    public function Afficheretudiant()
+    {
+        require ('Pageajouteretudiantc.php');
+        Ajouteretudiant();
+    }
+
 
 
 }
