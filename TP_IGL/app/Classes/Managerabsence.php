@@ -1,4 +1,8 @@
 <?php
+//require __DIR__.'/etudiant.php';
+
+require __DIR__.'/absence.php';
+//require __DIR__.'/Classes/etudiant.php';
  class Managerabsence
  {
      /**
@@ -27,8 +31,18 @@
      }
      public function printAbs(etudiant $etudiant)
      {
-    // return $this->bdd->exec('SELECT Matricule, Matiere, Jour FROM ABSENCES WHERE Matricule ='.$etudiant->getMatricule());
-         return $this->bdd->query('SELECT Matricule, Matiere, Jour FROM ABSENCES WHERE Matricule ='.$etudiant->getMatricule());
+   // $tab_req =$this->bdd->exec('SELECT Matricule, Matiere, Jour FROM ABSENCES WHERE Matricule ='.$etudiant->getMatricule());
+
+    $tab_abs=[];
+    $tab_req= $this->bdd->query('SELECT Matricule, Matiere, Jour , justifie FROM ABSENCES WHERE Matricule ='.$etudiant->getMatricule());
+    while ($abs=$tab_req->fetch(PDO::FETCH_ASSOC))
+    {
+        $temp_abs=new absence();
+        $temp_abs->hydrate($abs);
+        //$temp_abs->setMatricule($abs['Matricule']);
+        $tab_abs[]=$temp_abs;
+    }
+    return $tab_abs;
      }
 
 

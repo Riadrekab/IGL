@@ -24,17 +24,29 @@
   echo "<table border=1>";
   echo  "<tr>";
   echo "<th>Matricule</th>";
-  echo "<th>Nom</th>";
-  echo "<th>Prénom</th>";
-  echo "<th>Abs</th>";
+  echo "<th>Module</th>";
+  echo "<th>Date</th>";
+  echo "<th>Justifié</th>";
   echo "</tr>";
+
   foreach ($tab_abs as $etudiant)
   {
       echo "<tr>";
-      echo  "<td>".$etudiant['Matricule']."</td>" ;
-    //  echo  "<td>".$etudiant['NomEtud']."</td>" ;
-     // echo  "<td>".$etudiant['Prenoms']."</td>" ;
-     // echo  "<td> <input type='checkbox' id='Chx_abs'></td>";
+
+      echo "<td>".$etudiant->getMatricule()."</td>";
+      echo "<td>".$etudiant->getModule()."</td>";
+      echo "<td>".$etudiant->getDate()."</td>";
+     // echo "<td>".$etudiant->getJustifie()."</td>";
+      if ($etudiant->getJustifie()=='1')
+      {
+          echo  "<td> <input type='checkbox' checked id='Chx_abs' onclick='return false;'></td>";
+      }
+      else
+      {
+       echo  "<td> <input type='checkbox'   id='Chx_abs' onclick='return false;'></td>";
+      }
+
+
       echo "</tr>";
 
   }
