@@ -15,10 +15,11 @@
 </head>
 <body>
 <h1>Ajouter etudiant</h1>
-
-<?php
-
-?>
-
+<form method="POST" action="http://localhost/IGL/TP_IGL/public/index.php/ajouter_etudiant" accept-charset="UTF-8">
+    {{csrf_field()}}
+    <label for="nom">Entrez votre nom : </label>
+    <input name="nom" type="text" id="nom">
+    <input type="submit" value="Envoyer !">
+</form>
 </body>
 </html>

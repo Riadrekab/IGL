@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +18,7 @@
    <h1>Home page test</h1>
   Var1:{{$test1}}
   Var2:{{$test2}}
+
   <?php
   //include ('Views');
 //require('app/Pageabsencem.php');
