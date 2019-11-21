@@ -4,5 +4,6 @@ function Ajouteretudiant()
 {
    //
   //  require __DIR__.'/../../../resources/views/Ajoutetudiant.blade.php';
+
 }
 

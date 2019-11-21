@@ -24,13 +24,18 @@ class PagesController extends Controller
     public function Afficheretudiant()
     {
         require ('Pageajouteretudiantc.php');
-        Ajouteretudiant();
         return view('Ajoutetudiant');
     }
 
     public function postInfos(Request $request)
     {
-        return 'Le nom est ' . $request->input('nom');
+       // return 'Le nom est ' . $request->input('nom');
+        require ('Pageajouteretudiantc.php');
+        $matricule=$request->input('matricule');
+        $nom=$request->input('nom');
+        $prenom=$request->input('prenom');
+        AjoutEtuP($matricule,$nom,$prenom);
+        return view('Ajoutetudiant');
     }
 
 

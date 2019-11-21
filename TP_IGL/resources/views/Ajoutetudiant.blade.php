@@ -17,8 +17,13 @@
 <h1>Ajouter etudiant</h1>
 <form method="POST" action="http://localhost/IGL/TP_IGL/public/index.php/ajouter_etudiant" accept-charset="UTF-8">
     {{csrf_field()}}
-    <label for="nom">Entrez votre nom : </label>
+    <label for="matricule">Matricule: </label>
+    <input name="matricule" type="text" id="matricule">
+    <label for="nom">Nom: </label>
     <input name="nom" type="text" id="nom">
+    <label for="prenom">Prenom: </label>
+    <input name="prenom" type="text" id="prenom">
+
     <input type="submit" value="Envoyer !">
 </form>
 </body>
