@@ -3,14 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
-
+use Illuminate\Support\Facades\Input;
 use App\Http\Requests;
-
-
+use Hash;
 
 class PagesController extends Controller
 {
+
     public function home()
     {
     $test1='salut';
@@ -34,7 +33,9 @@ class PagesController extends Controller
         $matricule=$request->input('matricule');
         $nom=$request->input('nom');
         $prenom=$request->input('prenom');
-        AjoutEtuP($matricule,$nom,$prenom);
+        $nomUtil=$request->input("NomUtil");
+        $Mdp = Hash::make($request->input("Mdp"));
+        AjoutEtuP($matricule,$nom,$prenom,$nomUtil,$Mdp);
         return view('Ajoutetudiant');
     }
 
