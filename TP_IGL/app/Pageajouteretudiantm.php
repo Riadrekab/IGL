@@ -11,7 +11,7 @@ function AjoutEtuP($matricule,$nom,$prenom)
     $donne= array("Matricule"=>$matricule, "Nom"=>$nom, "Prenom"=>$prenom);
     $etudiant->hydrate($donne);
     $manager = new managerEtudiant($bdd);
-    $manager->addEtu($etudiant);
+    return $manager->addEtu($etudiant);
 
 
 }

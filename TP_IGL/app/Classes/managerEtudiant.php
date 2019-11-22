@@ -29,10 +29,23 @@ public function getBdd()
 
 public function addEtu( etudiant $etudiant)
 {
-   $q= $this->bdd->prepare('INSERT INTO etudiants(Matricule,NomEtud,Prenoms) VALUES(:matricule, :nom, :prenom)');
-   $q->bindValue(':matricule',$etudiant->getMatricule());
-   $q->bindValue('nom',$etudiant->getNom());
-   $q->bindValue('prenom',$etudiant->getPrenom());
-   $q->execute();
+
+
+    $stmt =  $this->bdd->prepare("SELECT * FROM etudiants WHERE Matricule=:matricule");
+    $stmt->execute(['matricule' => $etudiant->getMatricule()]);
+    if ($stmt->rowCount()==0)
+    {
+        $q= $this->bdd->prepare('INSERT INTO etudiants(Matricule,NomEtud,Prenoms) VALUES(:matricule, :nom, :prenom)');
+        $q->bindValue(':matricule',$etudiant->getMatricule());
+        $q->bindValue('nom',$etudiant->getNom());
+        $q->bindValue('prenom',$etudiant->getPrenom());
+        $q->execute();
+        return 'Ajout réussi';
+    }
+    else
+    {
+        return ' Cet étudiant existe déja dans la base de donnee';
+    }
+
 }
 }
