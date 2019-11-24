@@ -18,6 +18,7 @@ return [
         'passwords' => 'users',
     ],
 
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -38,8 +39,17 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'etudiants',
         ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+        'etudiant' => [
+            'driver' => 'session',
+            'provider' => 'etudiants',
+        ],
+
 
         'api' => [
             'driver' => 'token',
@@ -65,11 +75,14 @@ return [
     */
 
     'providers' => [
-        'users' => [
+        'etudiants' => [
             'driver' => 'eloquent',
-            'model' => App\User::class,
+            'model' => App\Etudiant::class,
         ],
-
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
+        ],
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',
@@ -90,7 +103,7 @@ return [
     | they have less time to be guessed. You may change this as needed.
     |
     */
-
+ /*
     'passwords' => [
         'users' => [
             'provider' => 'users',
@@ -98,5 +111,5 @@ return [
             'expire' => 60,
         ],
     ],
-
+ */
 ];

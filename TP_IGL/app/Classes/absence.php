@@ -67,11 +67,11 @@ class absence
         $this->Module = $Module;
     }
 
-    public function hydrate(array $donne)
+    public function hydrate($donne)
     {
-     $this->setMatricule($donne['Matricule']);
-     $this->setDate($donne['Jour']);
-     $this->setJustifie($donne['justifie']);
-      $this->setModule($donne['Matiere']);
+     $this->setMatricule($donne->Matricule);
+     $this->setDate($donne->Jour);
+     $this->setJustifie($donne->justifie);
+      $this->setModule($donne->Matiere);
     }
 }

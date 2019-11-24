@@ -5,17 +5,18 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends Authenticatable
+class Etudiant extends Authenticatable
 {
     use Notifiable;
     protected  $guard='etudiant';
+    public $timestamps = false;
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-         'NomUser', 'password','Matricule','NomEtud','Prenoms',
+         'NomUser', 'PassWord','Matricule','NomEtud','Prenoms',
     ];
 
     /**
@@ -26,4 +27,12 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * @return array
+     */
+    public function getFillable()
+    {
+        return $this->fillable;
+    }
 }

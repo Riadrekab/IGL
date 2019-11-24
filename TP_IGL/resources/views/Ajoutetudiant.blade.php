@@ -23,6 +23,10 @@
     <input name="nom" type="text" id="nom">
     <label for="prenom">Prenom: </label>
     <input name="prenom" type="text" id="prenom">
+    <label for="NomUtil">Nom d'utilisateur: </label>
+    <input name="NomUtil" type="text" id="NomUtil">
+    <label for="Mdp">Mot de passe: </label>
+    <input name="Mdp" type="text" id="Mdp">
 
     <input type="submit" value="Envoyer !">
 </form>
