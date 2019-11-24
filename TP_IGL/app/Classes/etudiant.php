@@ -2,7 +2,7 @@
 
 class etudiant
 {
-    private $Matricule, $Nom, $Prenom,$nomUtil,$Mdp;
+    private $Matricule, $Nom, $Prenom;
 
 
     public function hydrate(array $donne)
@@ -10,8 +10,6 @@ class etudiant
         $this->setMatricule($donne['Matricule']);
         $this->setNom($donne['Nom']);
         $this->setPrenom($donne['Prenom']);
-        $this->setNomUtil($donne['NomUtil']);
-        $this->setMdp($donne['Mdp']);
     }
 
     public function hydrate2(array $donne)
@@ -24,21 +22,7 @@ class etudiant
         }
     }
 
-    /**
-     * @return mixed
-     */
-    public function getNomUtil()
-    {
-        return $this->nomUtil;
-    }
 
-    /**
-     * @return mixed
-     */
-    public function getMdp()
-    {
-        return $this->Mdp;
-    }
     /**
      * @return mixed
      */
@@ -71,21 +55,6 @@ class etudiant
         $this->Prenom = $Prenom;
     }
 
-    /**
-     * @param mixed $Mdp
-     */
-    public function setMdp($Mdp)
-    {
-        $this->Mdp = $Mdp;
-    }
-
-    /**
-     * @param mixed $nomUtil
-     */
-    public function setNomUtil($nomUtil)
-    {
-        $this->nomUtil = $nomUtil;
-    }
     /**
      * @return mixed
      */

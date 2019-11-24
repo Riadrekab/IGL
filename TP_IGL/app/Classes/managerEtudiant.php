@@ -35,13 +35,10 @@ public function addEtu( etudiant $etudiant)
     $stmt->execute(['matricule' => $etudiant->getMatricule()]);
     if ($stmt->rowCount()==0)
     {
-        $q= $this->bdd->prepare('INSERT INTO etudiants(Matricule,NomEtud,Prenoms,NomUser,PassWord) 
-        VALUES(:matricule, :nom, :prenom,:NomUtil,:Mdp)');
+        $q= $this->bdd->prepare('INSERT INTO etudiants(Matricule,NomEtud,Prenoms) VALUES(:matricule, :nom, :prenom)');
         $q->bindValue(':matricule',$etudiant->getMatricule());
         $q->bindValue('nom',$etudiant->getNom());
         $q->bindValue('prenom',$etudiant->getPrenom());
-        $q->bindValue('NomUtil',$etudiant->getNomUtil());
-        $q->bindValue('Mdp',$etudiant->getMdp());
         $q->execute();
         return 'Ajout réussi';
     }
