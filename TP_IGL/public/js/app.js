@@ -990,7 +990,17 @@ window.Vue = __webpack_require__(35);
 Vue.component('example', __webpack_require__(39));
 
 var app = new Vue({
-  el: '#app'
+    el: '#app',
+    data: {
+        matricule: ''
+    },
+    methods: {
+        slash: function slash() {
+            if (this.matricule.length == 2 && this.matricule.indexOf('/') == -1) {
+                this.matricule += '/';
+            }
+        }
+    }
 });
 
 /***/ }),
