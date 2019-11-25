@@ -17,15 +17,15 @@
         <hr>
         <fieldset>
                 <label for="matricule">Matricule: </label>
-                <input name="matricule" type="text" id="matricule" placeholder="Matricule*">
+                <input name="matricule" v-model="matricule" @input="slash" type="text" id="matricule" placeholder="Matricule*" required>
                 <label for="nom">Nom: </label>
-                <input name="nom" type="text" id="nom" placeholder="Nom*">
+                <input name="nom" type="text" id="nom" placeholder="Nom*" required>
                 <label for="prenom">Prenom: </label>
-                <input name="prenom" type="text" id="prenom" placeholder="Prenom*">
+                <input name="prenom" type="text" id="prenom" placeholder="Prenom*" required>
             <label for="NomUtil">Nom d'utilisateur: </label>
-            <input name="NomUtil" type="text" id="NomUtil" placeholder="Nom d'utilisateur*">
+            <input name="NomUtil" type="text" id="NomUtil" placeholder="Nom d'utilisateur">
             <label for="Mdp">Mot de passe: </label>
-            <input name="Mdp" type="password" id="Mdp" placeholder="Mot de passe*">
+            <input name="Mdp" type="password" id="Mdp" placeholder="Mot de passes">
         </fieldset>
         <input type="submit"/>
         </form>
