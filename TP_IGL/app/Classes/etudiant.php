@@ -1,5 +1,5 @@
 <?php
-
+namespace App\classes;
 class etudiant
 {
      private $Matricule, $Nom, $Prenom,$nomUtil,$Mdp;

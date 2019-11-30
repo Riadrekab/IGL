@@ -13,6 +13,8 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('/consulter_absences', 'AbsencesController@index')->name('etudiant.consulterabsences');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/products/{id}', 'ProductController@show');

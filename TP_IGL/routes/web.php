@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/consulter_absences', 'PagesController@home')->name('etudiant.consulterabsences');;
+
 Route::get('/ajouter_etudiant','PagesController@Afficheretudiant');
 //Route::get('/ajouter_etudiant','PagesController@getInfos');
 Route::post('ajouter_etudiant','PagesController@postInfos');

@@ -7,7 +7,8 @@ use App\Etudiant;
 use Illuminate\Http\Request;
 
 use App\Http\Controllers\Controller;
-use Auth;
+
+use Illuminate\Support\Facades\Auth;
 
 
 class LoginController extends Controller
@@ -62,8 +63,14 @@ class LoginController extends Controller
             if (Auth::guard('etudiant')->attempt(['NomUser' => $request->NomUser, 'password' => $request->password], $request->remember))
 
             {
-                $username=$request->NomUser;
-                $request->session()->put('username', $username);
+
+               $mat=Auth::guard('etudiant')->user()->Matricule;
+
+
+                $request->session()->put('Matricule', $mat);
+                $request->session()->put('nom', Auth::guard('etudiant')->user()->NomEtu);
+                $request->session()->put('prenom', Auth::guard('etudiant')->user()->Prenoms);
+
                 return redirect()->route('etudiant.consulterabsences') ;
             }
             else {

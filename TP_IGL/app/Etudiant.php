@@ -35,4 +35,8 @@ class Etudiant extends Authenticatable
     {
         return $this->fillable;
     }
+    public function getId()
+    {
+        return $this->Matricule;
+    }
 }

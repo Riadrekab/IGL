@@ -67,6 +67,24 @@
       <path value="$PROJECT_DIR$/TP_IGL/vendor/dnoegel/php-xdg-base-dir" />
       <path value="$PROJECT_DIR$/TP_IGL/vendor/psy/psysh" />
       <path value="$PROJECT_DIR$/TP_IGL/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/xethron/laravel-4-generators" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/xethron/migrations-generator" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/TP_IGL/vendor/symfony/polyfill-php72" />
     </include_path>
   </component>
   <component name="PhpUnit">

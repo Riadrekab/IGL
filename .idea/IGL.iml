@@ -6,8 +6,13 @@
       <sourceFolder url="file://$MODULE_DIR$/TP_IGL/app" isTestSource="false" packagePrefix="App\" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/dnoegel/php-xdg-base-dir" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/doctrine/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/doctrine/dbal" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/doctrine/event-manager" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/doctrine/inflector" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/erusev/parsedown" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/fzaninotto/faker" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/hamcrest/hamcrest-php" />
@@ -35,7 +40,9 @@
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpunit/php-token-stream" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpunit/phpunit-mock-objects" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/psr/container" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/psy/psysh" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/sebastian/code-unit-reverse-lookup" />
@@ -53,22 +60,29 @@
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/css-selector" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/debug" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/event-dispatcher-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/finder" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/http-foundation" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/http-kernel" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/polyfill-iconv" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/polyfill-intl-idn" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/polyfill-mbstring" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/polyfill-php56" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/polyfill-php70" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/polyfill-php72" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/polyfill-util" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/translation-contracts" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/var-dumper" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/tijsverkoyen/css-to-inline-styles" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/xethron/laravel-4-generators" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/xethron/migrations-generator" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

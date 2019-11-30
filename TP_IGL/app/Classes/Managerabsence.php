@@ -1,10 +1,13 @@
 <?php
 //require __DIR__.'/etudiant.php';
-
-require __DIR__.'/absence.php';
+namespace App\Classes;
+use DB;
+use App\Classes\absence;
+use Illuminate\Database\Seeder;
 //require __DIR__.'/Classes/etudiant.php';
  class Managerabsence
  {
+
      /**
       * @var PDO
       */
@@ -41,7 +44,6 @@ require __DIR__.'/absence.php';
          //while ($abs=$tab_req->fetch(PDO::FETCH_ASSOC))
         foreach ($tab_req as $abs)
     {
-        echo 'yoooo1';
           $temp_abs=new absence();
           $temp_abs->hydrate($abs);
         //$temp_abs->setMatricule($abs['Matricule']);

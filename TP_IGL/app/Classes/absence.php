@@ -1,8 +1,8 @@
 <?php
-
+namespace App\Classes;
 class absence
 {
-    private $Date, $Module, $Justifie,$Matricule;
+    public $Date, $Module, $Justifie,$Matricule;
 
     /**
      * @param mixed $Matricule
