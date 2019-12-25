@@ -58,7 +58,11 @@ Create a new controller instance.
         //    $tab_abs = $manager->printAbs($etudiant);
 
 	   // return  new AbsenceResource::collection(Absmod::where('Matricule','=','2025')->get());
-	    return AbsenceResource::collection(Absmod::where('Matricule','=','10/1222')->get());
+        $abs =AbsenceResource::collection(Absmod::where('Matricule','=','10/1222')->get());
+
+       // (return ($abs))->with(redirect()->away('http://localhost/IGL/Frond-end/consulterAbs/consulterAbs.html'));
+       // return redirect()->away('http://localhost/IGL/Frond-end/consulterAbs/consulterAbs.html');
+        return ($abs);
 	}
 
 	/**
