@@ -52,10 +52,14 @@ return [
 
 
         'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
+            'driver' => 'passport',
+            'provider' => 'etudiants',
         ],
-    ],
+        'api2' => [
+            'driver' => 'passport',
+            'provider' => 'admins'
+        ]
+    ], 
 
     /*
     |--------------------------------------------------------------------------
@@ -75,18 +79,18 @@ return [
     */
 
     'providers' => [
-        'etudiants' => [
-            'driver' => 'eloquent',
-            'model' => App\Etudiant::class,
-        ],
-        'admins' => [
-            'driver' => 'eloquent',
-            'model' => App\Admin::class,
-        ],
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+         'etudiants' => [
+             'driver' => 'eloquent',
+             'model' => App\Etudiant::class,
+         ],
+         'admins' => [
+             'driver' => 'eloquent',
+             'model' => App\Admin::class,
+         ],
+          'users' => [
+              'driver' => 'database',
+               'table' => 'users',
+           ],
     ],
 
     /*

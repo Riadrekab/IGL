@@ -18,3 +18,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/products/{id}', 'ProductController@show');
+Route::post('/ajouter_etudiant','PagesController@postInfos');
+Route::post('/login', 'Auth\LoginController@login');

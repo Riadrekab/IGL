@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consulter Absenses</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"defer ></script>
+    <script src="app.js" defer></script>
+   <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    
+<div id="app" class="container">
+    
+    <table class="tableau">  
+        <thead>
+          <tr>
+            
+            <th v-for="col in colonnes" v-on:click="sortTable(col)">{{col}}</th><th><label class="checkbox"><input onclick="return false;" type="checkbox"checked></label></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="l in ligne">
+            <td v-for="c in colonnes">{{l[c]}}</td>  <td><label class="checkbox"><input type="checkbox"  v-model="l.Jusfifie===1?true:false" onclick="return false;"></label></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+</body>
+
+</html>

@@ -41,18 +41,21 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }
-
-    public function login(Request $request)
+    //ancien entete (Request $request)
+    public function login(Request $request2)
     {
+
+        $request2->NomUser=request('nomuser');
+        $request2->password=request('mdp');
         // Validate the form data
-        $this->validate($request, [
-            'NomUser'   => 'required',
-            'password' => 'required|min:6'
-        ]);
+       // $this->validate($request2, [
+         //   'NomUser'   => 'required',
+          //  'password' => 'required|min:6'
+       // ]);
 
 
         // Attempt to log the user in
-        if (Auth::guard('admin')->attempt(['NomUser' => $request->NomUser, 'password' => $request->password], $request->remember)) {
+        if (Auth::guard('admin')->attempt(['NomUser' => $request2->NomUser, 'password' => $request2->password], $request2->remember)) {
             // if successful, then redirect to their intended location
            // return (view('welcome'));
            return view('Ajoutetudiant');
@@ -60,21 +63,21 @@ class LoginController extends Controller
         }
         else {
 
-            if (Auth::guard('etudiant')->attempt(['NomUser' => $request->NomUser, 'password' => $request->password], $request->remember))
+            if (Auth::guard('etudiant')->attempt(['NomUser' => $request2->NomUser, 'password' => $request2->password], $request2->remember))
 
             {
 
-               $mat=Auth::guard('etudiant')->user()->Matricule;
+               //$mat=Auth::guard('etudiant')->user()->Matricule;
 
 
-                $request->session()->put('Matricule', $mat);
-                $request->session()->put('nom', Auth::guard('etudiant')->user()->NomEtu);
-                $request->session()->put('prenom', Auth::guard('etudiant')->user()->Prenoms);
+              //  $request->session()->put('Matricule', $mat);
+              //  $request->session()->put('nom', Auth::guard('etudiant')->user()->NomEtu);
+              //  $request->session()->put('prenom', Auth::guard('etudiant')->user()->Prenoms);
 
                 return redirect()->route('etudiant.consulterabsences') ;
             }
             else {
-                return redirect()->back()->withInput($request->only('NomUser', 'remember'));
+                return redirect()->back()->withInput($request2->only('NomUser', 'remember'));
             }
         }
     }

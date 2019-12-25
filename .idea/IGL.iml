@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/TP_IGL/tests" isTestSource="true" packagePrefix="Tests\" />
       <sourceFolder url="file://$MODULE_DIR$/TP_IGL/app" isTestSource="false" packagePrefix="App\" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/defuse/php-encryption" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/dnoegel/php-xdg-base-dir" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/doctrine/cache" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/doctrine/dbal" />
@@ -14,14 +15,22 @@
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/doctrine/lexer" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/egulias/email-validator" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/erusev/parsedown" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/firebase/php-jwt" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/fzaninotto/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/jakub-onderka/php-console-color" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/jakub-onderka/php-console-highlighter" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/kylekatarnls/update-helper" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/laravel/passport" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/lcobucci/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/league/event" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/league/oauth2-server" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/monolog/monolog" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/mtdowling/cron-expression" />
@@ -32,6 +41,7 @@
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpseclib/phpseclib" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpspec/prophecy" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpunit/php-code-coverage" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpunit/php-file-iterator" />
@@ -41,9 +51,11 @@
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpunit/phpunit" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/phpunit/phpunit-mock-objects" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/psr/http-message" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/psr/log" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/ralouphie/getallheaders" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/ramsey/uuid" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/sebastian/code-unit-reverse-lookup" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/sebastian/comparator" />
@@ -73,6 +85,7 @@
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/polyfill-php72" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/polyfill-util" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/psr-http-message-bridge" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/routing" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/symfony/translation-contracts" />
@@ -83,6 +96,7 @@
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/webmozart/assert" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/xethron/laravel-4-generators" />
       <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/xethron/migrations-generator" />
+      <excludeFolder url="file://$MODULE_DIR$/TP_IGL/vendor/zendframework/zend-diactoros" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
