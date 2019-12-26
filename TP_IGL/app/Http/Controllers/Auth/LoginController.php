@@ -77,6 +77,7 @@ class LoginController extends Controller
 
             {
                 $mat=Auth::guard('etudiant')->user()->Matricule;
+                $mat=str_replace('/','p',$mat);
                 $res=[
 
                     'Logged' => 'yes',

@@ -14,10 +14,11 @@ use Illuminate\Http\Request;
 */
 
 
-Route::get('/consulter_absences', 'AbsencesController@index')->name('etudiant.consulterabsences');
+Route::get('/consulter_absences{mat}', 'AbsencesController@index')->name('etudiant.consulterabsences');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('/products/{id}', 'ProductController@show');
 Route::post('/ajouter_etudiant','PagesController@postInfos');
 Route::post('/login', 'Auth\LoginController@login');
+//Route::post('/consulter_absences', 'AbsencesController@setMatricule');
