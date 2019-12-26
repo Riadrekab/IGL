@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Etudiant;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\Resource;
 
 use App\Http\Controllers\Controller;
 
@@ -58,7 +59,16 @@ class LoginController extends Controller
         if (Auth::guard('admin')->attempt(['NomUser' => $request2->NomUser, 'password' => $request2->password], $request2->remember)) {
             // if successful, then redirect to their intended location
            // return (view('welcome'));
-           return view('Ajoutetudiant');
+            //
+            $res=[
+
+                'Logged' => 'yes',
+                'Type' => 'admin',
+                'Nomuser'=>'',
+            ];
+
+            return response()->json($res);
+           // return view('Ajoutetudiant');
 
         }
         else {
@@ -66,18 +76,33 @@ class LoginController extends Controller
             if (Auth::guard('etudiant')->attempt(['NomUser' => $request2->NomUser, 'password' => $request2->password], $request2->remember))
 
             {
+                $mat=Auth::guard('etudiant')->user()->Matricule;
+                $res=[
 
-               //$mat=Auth::guard('etudiant')->user()->Matricule;
+                    'Logged' => 'yes',
+                    'Type' => 'etudiant',
+                    'Matirucle'=>$mat,
+                ];
+
+
 
 
               //  $request->session()->put('Matricule', $mat);
               //  $request->session()->put('nom', Auth::guard('etudiant')->user()->NomEtu);
               //  $request->session()->put('prenom', Auth::guard('etudiant')->user()->Prenoms);
 
-                return redirect()->route('etudiant.consulterabsences') ;
+                //return redirect()->route('etudiant.consulterabsences') ;
+                return response()->json($res);
             }
             else {
-                return redirect()->back()->withInput($request2->only('NomUser', 'remember'));
+                $res=[
+
+                    'Logged' => 'no',
+                    'Type' => '',
+                    'Nomuser'=>'',
+                ];
+               // return redirect()->back()->withInput($request2->only('NomUser', 'remember'));
+                return response()->json($res);
             }
         }
     }
