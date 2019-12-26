@@ -12,15 +12,15 @@
 */
 
 
-Route::get('/ajouter_etudiant','PagesController@Afficheretudiant');
+//Route::get('/ajouter_etudiant','PagesController@Afficheretudiant');
 //Route::get('/ajouter_etudiant','PagesController@getInfos');
-Route::post('ajouter_etudiant','PagesController@postInfos');
+//Route::post('ajouter_etudiant','PagesController@postInfos');
 //Route::get('/','HomeController@index')->name('home');
 //Route::get('/test', function () {
   ///  return 'Un test yes';
 
-Route::post('/login', 'Auth\LoginController@login');
-Auth::routes();
+//Route::post('/login', 'Auth\LoginController@login');
+//Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@index');
