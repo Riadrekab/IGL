@@ -13,10 +13,10 @@
 </head>
 <body>
 <div id="app">
-    <form  method="post" @submit.prevent='submit'>
-    <input type="text" v-model='message'>
-	<input type="text" v-model='mdp'>
-     <button type="submit">ab3eth</button>
+    <form  method="post"  @submit.prevent='submit' required>
+    <input type="text" id="username" placeholder="Nom d'utilisateur" v-model='message'>
+	<input type="text" type="password" id="mdp" placeholder="Mot de passes" v-model='mdp'>
+     <button type="submit" id="login">Se Connecter</button>
     {{message}}
     <br>
    <span>Type:  {{type}} <br> Matirucle:{{matricule}} </span>
