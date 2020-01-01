@@ -54,7 +54,7 @@ var app = new Vue({
        // let param = this.$route.query
         //console.log('matricule')
         axios
-      .get('http://localhost/IGL/TP_IGL/public/index.php/api/consulter_absences'+ param)
+      .get('http://localhost/IGL/Back-end/Consulter_absence_microservice/public/index.php/api/consulter_absences'+ param)
       .then(response => {this.ligne = response.data.data});
   }
 });

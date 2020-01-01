@@ -20,7 +20,7 @@ methods:{
       this.$swal('Hello word!')
     },
     submit (){
-       axios.post('http://localhost/IGL/TP_IGL/public/index.php/api/login',{var:'test',mdp:this.mdp, nomuser:this.message})
+       axios.post('http://localhost/IGL/Back-end/Login_microservice/public/index.php/api/login',{var:'test',mdp:this.mdp, nomuser:this.message})
        .then(response =>{
        	this.type = response.data.Type;this.matricule=response.data.Matirucle;
        	if (response.data.Logged == 'yes')
