@@ -10,5 +10,6 @@ return array(
     'Way\\Generators' => array($vendorDir . '/xethron/laravel-4-generators/src'),
     'UpdateHelper\\' => array($vendorDir . '/kylekatarnls/update-helper/src'),
     'Parsedown' => array($vendorDir . '/erusev/parsedown'),
+    'Mpociot' => array($vendorDir . '/mpociot/reflection-docblock/src'),
     'Mockery' => array($vendorDir . '/mockery/mockery/library'),
 );

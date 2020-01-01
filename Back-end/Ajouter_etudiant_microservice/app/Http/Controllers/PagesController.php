@@ -51,7 +51,7 @@ class PagesController extends Controller
 
            {
                $res=[
-                   'Erreur' => 'Le Matricule entré exsiste deja',
+                   'Erreur' => 'Le Matricule entré existe deja',
 
                     ];
 
