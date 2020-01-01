@@ -2,9 +2,12 @@
 
 namespace Tests\Unit;
 
-use Tests\TestCase;
+
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use tests\TestCase;
+
+require './vendor/autoload.php';
 
 class ExampleTest extends TestCase
 {
