@@ -64,24 +64,13 @@ Create a new controller instance.
 
 	{
 
-	   // $mat=$this->getMatricule();
 
        $mat=str_replace('p','/',$mat);
         $etudiant=new etudiant();
         $manager= new Managerabsence(NULL);
             $etudiant->setMatricule($mat);
-           // $etudiant->setNom(Session()->get('nom'));
-          //  $etudiant->setPrenom(Session()->get('prenom'));
-           // $mat=$etudiant->getMatricule();
-
-        //    $tab_abs = $manager->printAbs($etudiant)
-       //  return response()->json($mat);
-	   // return  new AbsenceResource::collection(Absmod::where('Matricule','=','2025')->get());
-     //   $abs =AbsenceResource::collection(Absmod::where('Matricule','=','10/1222')->get());
         $abs =AbsenceResource::collection(Absmod::where('Matricule','=',$mat)->get());
 
-       // (return ($abs))->with(redirect()->away('http://localhost/IGL/Frond-end/consulterAbs/consulterAbs.html'));
-       // return redirect()->away('http://localhost/IGL/Frond-end/consulterAbs/consulterAbs.html');
         return ($abs);
 	}
 

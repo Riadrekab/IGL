@@ -48,18 +48,12 @@ class LoginController extends Controller
 
         $request2->NomUser=request('nomuser');
         $request2->password=request('mdp');
-        // Validate the form data
-       // $this->validate($request2, [
-         //   'NomUser'   => 'required',
-          //  'password' => 'required|min:6'
-       // ]);
 
 
-        // Attempt to log the user in
+
+
         if (Auth::guard('admin')->attempt(['NomUser' => $request2->NomUser, 'password' => $request2->password], $request2->remember)) {
-            // if successful, then redirect to their intended location
-           // return (view('welcome'));
-            //
+
             $res=[
 
                 'Logged' => 'yes',
@@ -68,7 +62,7 @@ class LoginController extends Controller
             ];
 
             return response()->json($res);
-           // return view('Ajoutetudiant');
+
 
         }
         else {
@@ -88,11 +82,7 @@ class LoginController extends Controller
 
 
 
-              //  $request->session()->put('Matricule', $mat);
-              //  $request->session()->put('nom', Auth::guard('etudiant')->user()->NomEtu);
-              //  $request->session()->put('prenom', Auth::guard('etudiant')->user()->Prenoms);
 
-                //return redirect()->route('etudiant.consulterabsences') ;
                 return response()->json($res);
             }
             else {
@@ -102,7 +92,7 @@ class LoginController extends Controller
                     'Type' => '',
                     'Nomuser'=>'',
                 ];
-               // return redirect()->back()->withInput($request2->only('NomUser', 'remember'));
+             
                 return response()->json($res);
             }
         }

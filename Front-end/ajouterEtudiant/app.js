@@ -15,7 +15,19 @@ const app = new Vue({
             }
         },
         ab3eth(){
-            axios.post('http://localhost/IGL/TP_IGL/public/index.php/api/ajouter_etudiant',{matricule:this.matricule,nom:this.nom,prenom:this.prenom,NomUtil:this.NomUtil,Mdp:this.Mdp});
+            axios.post('http://localhost/IGL/TP_IGL/public/index.php/api/ajouter_etudiant',{matricule:this.matricule,nom:this.nom,prenom:this.prenom,NomUtil:this.NomUtil,Mdp:this.Mdp}).then(
+			response =>{
+				Err = response.data.Erreur;
+				if (Err == 0)
+				{
+				 alert('Etudiant ajouté avec succes');	
+				}
+				else
+				{
+					alert(Err);
+				}
+			}
+		);
         }
     }
 });

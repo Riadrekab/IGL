@@ -16,6 +16,9 @@ methods:{
 	mat_send () {
 		this.matricule=this.matirucle.replace('10','11');
 	},
+	    alert() {
+      this.$swal('Hello word!')
+    },
     submit (){
        axios.post('http://localhost/IGL/TP_IGL/public/index.php/api/login',{var:'test',mdp:this.mdp, nomuser:this.message})
        .then(response =>{
@@ -32,6 +35,7 @@ methods:{
        }
        	if (this.Logged == true)
        	{
+			
        		if (this.type == 'etudiant')
                {
          	window.location.href = 'http://localhost/IGL/Front-end/ConsulterAbs/consulterAbs.html?matricule=' + this.matricule;
@@ -42,6 +46,10 @@ methods:{
        	      window.location.href='http://localhost/IGL/Front-end/ajouteretudiant/ajoutEtudiant.html';
        	     }
        }
+	   else 
+	   {
+		  alert('Usernam Or Password are is incorrect try again!');
+	   }
        } );
         
     }

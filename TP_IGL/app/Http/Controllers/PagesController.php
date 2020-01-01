@@ -12,30 +12,14 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
-
+use Illuminate\Database\QueryException;
 
 
 
 class PagesController extends Controller
 {
-    public function home()
-    {
-        $username=Session()->get('username');
 
 
-    $test1='salut';
-    $test2='ouais';
-   // return view('home',compact('test1','test2'));
-      require ('Pageabsencec.php');
-      $tab_abs= affichieretudiant($username);
-      return view('Consulterabsences',compact('test1','test2','tab_abs'));
-    }
-
-    public function Afficheretudiant()
-    {
-        require ('Pageajouteretudiantc.php');
-        return view('Ajoutetudiant');
-    }
 
     public function postInfos()
     {
@@ -47,29 +31,41 @@ class PagesController extends Controller
         $prenom=request('prenom');
         $nomUtil=request("NomUtil");
         $Mdp = Hash::make(request("Mdp"));
-        Etudiant::create([
-            'Matricule' => request('matricule'),
-            'NomEtud' => request('nom'),
-            'Prenoms' => request('prenom'),
-            'NomUser' => request('NomUtil'),
-            'PassWord' => $Mdp,
-        ]);
+       try {
+           //return response()->json(['err'=> '0']);
+           Etudiant::create([
+               'Matricule' => request('matricule'),
+               'NomEtud' => request('nom'),
+               'Prenoms' => request('prenom'),
+               'NomUser' => request('NomUtil'),
+               'PassWord' => $Mdp,
+           ]);
+           $res=[
+               'Erreur' => '0',
+           ];
+           return response()->json($res);
+       }
+       catch (QueryException $e){
+           $errorCode = $e->errorInfo[1];
+           if($errorCode == 1062)
+
+           {
+               $res=[
+                   'Erreur' => 'Le Matricule entré exsiste deja',
+
+                    ];
+
+               return response()->json($res);
+               // houston, we have a duplicate entry problem
+           }
+
+       }
      //   AjoutEtuP($matricule,$nom,$prenom,$nomUtil,$Mdp);
        // return view('Ajoutetudiant');
+
+
     }
-    public function postInfos2(Request $request)
-    {
-        // return 'Le nom est ' . $request->input('nom');
-        // require ('Pageajouteretudiantc.php');
-        $matricule=$request->input('matricule');
-       // echo($matricule);
-        $nom=$request->input('nom');
-        $prenom=$request->input('prenom');
-        $nomUtil=$request->input("NomUtil");
-        $Mdp = Hash::make($request->input("Mdp"));
-        AjoutEtuP($matricule,$nom,$prenom,$nomUtil,$Mdp);
-        // return view('Ajoutetudiant');
-    }
+
 
 
 
