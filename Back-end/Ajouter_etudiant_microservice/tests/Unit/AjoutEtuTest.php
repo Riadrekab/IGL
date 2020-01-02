@@ -11,8 +11,8 @@ class AjoutEtuTest extends TestCase
 {
     public function testajoutEtu()
     {
-        $TAjEtu=new PagesController();
-        $TAjEtu->postInfos();
-        $this->assertTrue(true,"true");
+        $response = $this->call('POST', '/ajouter_etudiant', ['name' => 'Taylor']);
+        echo $response->status();
+
     }
 }

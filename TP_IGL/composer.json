@@ -10,7 +10,8 @@
         "laravel/passport": "~4.0",
         "laravel/tinker": "~1.0",
         "paragonie/random_compat": "2.",
-        "ext-pdo": "*"
+        "ext-pdo": "*",
+        "ext-json": "*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
