@@ -11,6 +11,13 @@ use App\Classes\absence;
 
 class ConsulterEtudiantTest extends TestCase
 {
+   /* public function testPrint2()
+    {
+        $absC=new AbsencesController();
+        $response=$this->call('GET','/consulter_absences{10/1222}');
+        $this->assertEquals(200,$response->getStatusCode());
+
+    }*/
     public  function testPrintabs()
     {
 

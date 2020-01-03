@@ -17,6 +17,6 @@ use Illuminate\Http\Request;
 
 
 
-Route::post('/ajouter_etudiant','PagesController@postInfos');
+Route::post('http://ajouter_etudiant','PagesController@postInfos');
 
 
