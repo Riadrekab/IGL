@@ -8,20 +8,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"defer ></script>
 	<script src="https://unpkg.com/vue-swal"></script>
     <script src="App.js" defer></script>
+    <link rel="stylesheet" href="app.css">
      
     <title>Envoyer un test</title>
 
 </head>
 <body>
-<div id="app">
+<div id="app" class="container">
     <form  method="post"  @submit.prevent='submit' required>
+        <legend><span class="titre"></span>Se connecter</legend>
+        <hr>
+    <label for="username">Nom d'utilisateur: </label>
     <input type="text" id="username" placeholder="Nom d'utilisateur" v-model='message'>
-	<input type="text" type="password" id="mdp" placeholder="Mot de passes" v-model='mdp'>
-     <button type="submit" id="login">Se Connecter</button>
-    {{message}}
-    <br>
-   <span>Type:  {{type}} <br> Matirucle:{{matricule}} </span>
+    <label for="password">Mot de passe: </label>
+	<input type="password" type="password" id="mdp" placeholder="Mot de passe" v-model='mdp'>
+    <input type="submit" id="login"/>
+ 
 
+
+  
    
 
 	
