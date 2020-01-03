@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"defer ></script>
+    <script src="App.js" defer></script>
+     <link rel="stylesheet" href="app.css">
+    <title>Ajouter Etudiant</title>
+
+</head>
+<body>
+
+<div id="app" class="container">
+        <form @submit.prevent="ab3eth" accept-charset="UTF-8">
+        <legend><span class="titre"></span>Ajouter Etudiant</legend>
+        <hr>
+        <fieldset>
+                <label for="matricule">Matricule: </label>
+                <input name="matricule" v-model="matricule" @input="slash" type="text" id="matricule" placeholder="Matricule*" required>
+                <label for="nom">Nom: </label>
+                <input name="nom" v-model="nom" type="text" id="nom" placeholder="Nom*" required>
+                <label for="prenom">Prenom: </label>
+                <input name="prenom" v-model="prenom" type="text" id="prenom" placeholder="Prenom*" required>
+            <label for="NomUtil">Nom d'utilisateur: </label>
+            <input name="NomUtil" type="text" v-model="NomUtil" id="NomUtil" placeholder="Nom d'utilisateur">
+            <label for="Mdp">Mot de passe: </label>
+            <input name="Mdp" type="password" v-model="Mdp" id="Mdp" placeholder="Mot de passes">
+        </fieldset>
+        <input type="submit" id="ajouter"/>
+        </form>
+        </div></body>
+
+</html>
