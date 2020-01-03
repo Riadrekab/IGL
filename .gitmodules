@@ -1,0 +1,9 @@
+[submodule "Back-end/Ajouter_etudiant_microservice/laradock"]
+	path = Back-end/Ajouter_etudiant_microservice/laradock
+	url = https://github.com/Laradock/laradock.git
+[submodule "Back-end/Consulter_absence_microservice/laradock"]
+	path = Back-end/Consulter_absence_microservice/laradock
+	url = https://github.com/Laradock/laradock.git
+[submodule "Back-end/Login_microservice/laradock"]
+	path = Back-end/Login_microservice/laradock
+	url = https://github.com/Laradock/laradock.git
